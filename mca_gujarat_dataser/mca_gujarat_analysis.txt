@@ -1,0 +1,436 @@
+
+======================================================================
+  1. DATASET OVERVIEW
+======================================================================
+
+  File            : mca_gujarat.csv
+  Rows            : 95,826
+  Columns         : 22
+  Total cells     : 2,108,172
+  Duplicate rows  : 0
+  Memory usage    : 99626.3 KB
+
+  Columns : ['CORPORATE_IDENTIFICATION_NUMBER', 'COMPANY_NAME', 'COMPANY_STATUS', 'COMPANY_CLASS', 'COMPANY_CATEGORY', 'COMPANY_SUB_CATEGORY', 'DATE_OF_REGISTRATION', 'REGISTERED_STATE', 'AUTHORIZED_CAP', 'PAIDUP_CAPITAL', 'INDUSTRIAL_CLASS', 'PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN', 'REGISTRAR_OF_COMPANIES', 'EMAIL_ADDR', 'LATEST_YEAR_ANNUAL_RETURN', 'LATEST_YEAR_FINANCIAL_STATEMENT', 'Registration_Year', 'Registration_Month', 'Company_Age_Years', 'Paidup_to_Authorized_Ratio', 'Is_Fully_PaidUp', 'Email_Domain']
+
+======================================================================
+  2. DATA TYPES & COLUMN INFO
+======================================================================
+
+  Column                         Dtype             Non-Null     Null    Null%
+  ---------------------------------------------------------------------------
+  CORPORATE_IDENTIFICATION_NUMBER object              95,826        0    0.00%
+  COMPANY_NAME                   object              95,826        0    0.00%
+  COMPANY_STATUS                 object              95,826        0    0.00%
+  COMPANY_CLASS                  object              95,826        0    0.00%
+  COMPANY_CATEGORY               object              95,826        0    0.00%
+  COMPANY_SUB_CATEGORY           object              95,826        0    0.00%
+  DATE_OF_REGISTRATION           object              95,826        0    0.00%
+  REGISTERED_STATE               object              95,826        0    0.00%
+  AUTHORIZED_CAP                 float64             95,826        0    0.00%
+  PAIDUP_CAPITAL                 float64             95,826        0    0.00%
+  INDUSTRIAL_CLASS               object              95,826        0    0.00%
+  PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN object              95,826        0    0.00%
+  REGISTRAR_OF_COMPANIES         object              95,826        0    0.00%
+  EMAIL_ADDR                     object              95,826        0    0.00%
+  LATEST_YEAR_ANNUAL_RETURN      object              95,826        0    0.00%
+  LATEST_YEAR_FINANCIAL_STATEMENT object              95,826        0    0.00%
+  Registration_Year              float64             95,826        0    0.00%
+  Registration_Month             object              95,826        0    0.00%
+  Company_Age_Years              float64             95,826        0    0.00%
+  Paidup_to_Authorized_Ratio     float64             95,826        0    0.00%
+  Is_Fully_PaidUp                int64               95,826        0    0.00%
+  Email_Domain                   object              95,826        0    0.00%
+
+======================================================================
+  3. MISSING VALUE ANALYSIS
+======================================================================
+
+  ✅  No missing values found.
+
+======================================================================
+  4. NUMERIC COLUMNS — DESCRIPTIVE STATISTICS
+======================================================================
+
+  Numeric columns (6): ['AUTHORIZED_CAP', 'PAIDUP_CAPITAL', 'Registration_Year', 'Company_Age_Years', 'Paidup_to_Authorized_Ratio', 'Is_Fully_PaidUp']
+
+  ── AUTHORIZED_CAP ──
+     count   : 95,826
+     mean    : 63202064.0719
+     std     : 2690387469.5267
+     min     : 0.0000
+     25%     : 100000.0000
+     50%     : 500000.0000
+     75%     : 2500000.0000
+     max     : 600000000000.0000
+     skew    : 138.5951  (right-skewed)
+     kurtosis: 27112.4391
+     zeros   : 1,420
+     negatives: 0
+     unique  : 1,325
+
+  ── PAIDUP_CAPITAL ──
+     count   : 95,826
+     mean    : 29866565.2136
+     std     : 1730887980.9292
+     min     : 0.0000
+     25%     : 100000.0000
+     50%     : 100000.0000
+     75%     : 1000000.0000
+     max     : 457000000000.0000
+     skew    : 207.9058  (right-skewed)
+     kurtosis: 51872.6475
+     zeros   : 10,103
+     negatives: 0
+     unique  : 13,222
+
+  ── Registration_Year ──
+     count   : 95,826
+     mean    : 2004.7891
+     std     : 7.6094
+     min     : 1900.0000
+     25%     : 2006.0000
+     50%     : 2006.0000
+     75%     : 2006.0000
+     max     : 2018.0000
+     skew    : -2.6978  (left-skewed)
+     kurtosis: 15.8304
+     zeros   : 0
+     negatives: 0
+     unique  : 107
+
+  ── Company_Age_Years ──
+     count   : 95,826
+     mean    : 21.2109
+     std     : 7.6094
+     min     : 8.0000
+     25%     : 20.0000
+     50%     : 20.0000
+     75%     : 20.0000
+     max     : 126.0000
+     skew    : 2.6978  (right-skewed)
+     kurtosis: 15.8304
+     zeros   : 0
+     negatives: 0
+     unique  : 107
+
+  ── Paidup_to_Authorized_Ratio ──
+     count   : 95,826
+     mean    : 0.6342
+     std     : 0.4615
+     min     : 0.0000
+     25%     : 0.1000
+     50%     : 0.9209
+     75%     : 1.0000
+     max     : 40.0100
+     skew    : 8.0471  (right-skewed)
+     kurtosis: 614.0430
+     zeros   : 10,122
+     negatives: 0
+     unique  : 12,676
+
+  ── Is_Fully_PaidUp ──
+     count   : 95,826
+     mean    : 0.4593
+     std     : 0.4983
+     min     : 0.0000
+     25%     : 0.0000
+     50%     : 0.0000
+     75%     : 1.0000
+     max     : 1.0000
+     skew    : 0.1634  (approx. normal)
+     kurtosis: -1.9733
+     zeros   : 51,814
+     negatives: 0
+     unique  : 2
+
+
+======================================================================
+  5. OUTLIER DETECTION (IQR method, 1.5×IQR rule)
+======================================================================
+
+  Column                           Outliers   Outlier%     Lower fence     Upper fence
+  -------------------------------------------------------------------------------------
+  AUTHORIZED_CAP                     15,337     16.01%   -3500000.0000    6100000.0000
+  PAIDUP_CAPITAL                     18,297     19.09%   -1250000.0000    2350000.0000
+  Registration_Year                  36,361     37.94%       2006.0000       2006.0000
+  Company_Age_Years                  36,361     37.94%         20.0000         20.0000
+  Paidup_to_Authorized_Ratio             20      0.02%         -1.2500          2.3500
+  Is_Fully_PaidUp                         0      0.00%         -1.5000          2.5000
+
+======================================================================
+  6. CATEGORICAL COLUMNS — VALUE DISTRIBUTION
+======================================================================
+
+  Categorical columns (16): ['CORPORATE_IDENTIFICATION_NUMBER', 'COMPANY_NAME', 'COMPANY_STATUS', 'COMPANY_CLASS', 'COMPANY_CATEGORY', 'COMPANY_SUB_CATEGORY', 'DATE_OF_REGISTRATION', 'REGISTERED_STATE', 'INDUSTRIAL_CLASS', 'PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN', 'REGISTRAR_OF_COMPANIES', 'EMAIL_ADDR', 'LATEST_YEAR_ANNUAL_RETURN', 'LATEST_YEAR_FINANCIAL_STATEMENT', 'Registration_Month', 'Email_Domain']
+
+  ── CORPORATE_IDENTIFICATION_NUMBER ──
+     unique values  : 95,826
+     null count     : 0
+     top 10 values  :
+       U75143GJ2015SGC083828                      1  (0.00%)
+       U01223GJ2001PTC039771                      1  (0.00%)
+       U74120GJ2015PTC084949                      1  (0.00%)
+       U74120GJ2015PTC084685                      1  (0.00%)
+       U74120GJ2015PTC084584                      1  (0.00%)
+       U74120GJ2015PTC084338                      1  (0.00%)
+       U74120GJ2015PTC084242                      1  (0.00%)
+       U74120GJ2015PTC084216                      1  (0.00%)
+       U74120GJ2015PTC084179                      1  (0.00%)
+       U74120GJ2015PTC084163                      1  (0.00%)
+       ... and 95816 more unique values
+
+  ── COMPANY_NAME ──
+     unique values  : 95,506
+     null count     : 0
+     top 10 values  :
+       MOLY METAL PRIVATE LIMITED                 3  (0.00%)
+       CERRONET TECHNOLOGIES PRIVATE LIMITED        3  (0.00%)
+       PARK - WELL PRIVATE LIMITED                3  (0.00%)
+       LAXMI ALUTRADE PRIVATE LIMITED             3  (0.00%)
+       RAJHANS FUNPARK PRIVATE LIMITED            3  (0.00%)
+       SPRAYKING AGRO EQUIPMENT LIMITED           2  (0.00%)
+       SAKAR HEALTHCARE LIMITED                   2  (0.00%)
+       ICE MAKE REFRIGERATION LIMITED             2  (0.00%)
+       MEDICO EXIM PRIVATE LIMITED                2  (0.00%)
+       SHRI AMARSINHJI STATIONERY INDUSTRIES LIMITED        2  (0.00%)
+       ... and 95496 more unique values
+
+  ── COMPANY_STATUS ──
+     unique values  : 12
+     null count     : 0
+     top 10 values  :
+       Active                                63,091  (65.84%)
+       Strike Off                            26,283  (27.43%)
+       Under Process of Striking off          3,017  (3.15%)
+       Amalgamated                            1,560  (1.63%)
+       Converted to LLP                         626  (0.65%)
+       Under liquidation                        608  (0.63%)
+       Converted to LLP and dissolved           298  (0.31%)
+       Not Available for eFiling                254  (0.27%)
+       Dissolved                                 52  (0.05%)
+       Dormant under section 455                 30  (0.03%)
+       ... and 2 more unique values
+
+  ── COMPANY_CLASS ──
+     unique values  : 3
+     null count     : 0
+     top 10 values  :
+       Private                               86,679  (90.45%)
+       Public                                 8,608  (8.98%)
+       Private(One Person Company)              539  (0.56%)
+
+  ── COMPANY_CATEGORY ──
+     unique values  : 3
+     null count     : 0
+     top 10 values  :
+       Company limited by Shares             93,644  (97.72%)
+       Company Limited by Guarantee           1,968  (2.05%)
+       Unlimited Company                        214  (0.22%)
+
+  ── COMPANY_SUB_CATEGORY ──
+     unique values  : 5
+     null count     : 0
+     top 10 values  :
+       Non-govt company                      94,861  (98.99%)
+       Guarantee and Association comp           620  (0.65%)
+       Subsidiary of Foreign Company            240  (0.25%)
+       State Govt company                        97  (0.10%)
+       Union Govt company                         8  (0.01%)
+
+  ── DATE_OF_REGISTRATION ──
+     unique values  : 11,293
+     null count     : 0
+     top 10 values  :
+       31-03-2014                                80  (0.08%)
+       21-11-1981                                49  (0.05%)
+       23-05-2013                                48  (0.05%)
+       12/3/2012                                 47  (0.05%)
+       20-04-2011                                46  (0.05%)
+       8/3/2017                                  46  (0.05%)
+       22-05-2017                                45  (0.05%)
+       1/4/2013                                  45  (0.05%)
+       7/2/2012                                  44  (0.05%)
+       24-03-2014                                43  (0.04%)
+       ... and 11283 more unique values
+
+  ── REGISTERED_STATE ──
+     unique values  : 1
+     null count     : 0
+     top 10 values  :
+       Gujarat                               95,826  (100.00%)
+
+  ── INDUSTRIAL_CLASS ──
+     unique values  : 1,742
+     null count     : 0
+     top 10 values  :
+       `45201                                 4,517  (4.71%)
+       `74999                                 3,918  (4.09%)
+       `51909                                 3,268  (3.41%)
+       `65910                                 3,061  (3.19%)
+       `72200                                 2,735  (2.85%)
+       `74140                                 2,665  (2.78%)
+       `17119                                 2,521  (2.63%)
+       `72900                                 2,386  (2.49%)
+       `67120                                 2,218  (2.31%)
+       `24231                                 2,072  (2.16%)
+       ... and 1732 more unique values
+
+  ── PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN ──
+     unique values  : 21
+     null count     : 0
+     top 10 values  :
+       Manufacturing (Metals & Chemicals, and products thereof)   15,555  (16.23%)
+       Business Services                     15,079  (15.74%)
+       Trading                               11,479  (11.98%)
+       Construction                           8,381  (8.75%)
+       Manufacturing (Machinery & Equipments)    8,182  (8.54%)
+       Manufacturing (Textiles)               8,149  (8.50%)
+       Finance                                7,520  (7.85%)
+       Community, personal & Social Services    4,705  (4.91%)
+       Manufacturing (Food stuffs)            2,805  (2.93%)
+       Transport, storage and Communications    2,710  (2.83%)
+       ... and 11 more unique values
+
+  ── REGISTRAR_OF_COMPANIES ──
+     unique values  : 9
+     null count     : 0
+     top 10 values  :
+       RoC-Ahmedabad                         95,804  (99.98%)
+       RoC-Goa                                    7  (0.01%)
+       RoC-Jaipur                                 5  (0.01%)
+       RoC-Gwalior                                3  (0.00%)
+       RoC-Kolkata                                2  (0.00%)
+       RoC-Mumbai                                 2  (0.00%)
+       RoC-Delhi                                  1  (0.00%)
+       RoC-Jammu                                  1  (0.00%)
+       RoC-Bangalore                              1  (0.00%)
+
+  ── EMAIL_ADDR ──
+     unique values  : 44,679
+     null count     : 0
+     top 10 values  :
+       k_dalal@rediffmail.com                23,744  (24.78%)
+       mcafiling@yahoo.co.in                    150  (0.16%)
+       dmsvilkiassociates@yahoo.com             110  (0.11%)
+       rupawala_ca@yahoo.co.in                  107  (0.11%)
+       hbkalaria.roc@gmail.com                  107  (0.11%)
+       vk_moondra@rediffmail.com                104  (0.11%)
+       sbmgandco@gmail.com                      103  (0.11%)
+       dpopatassociates@gmail.com               100  (0.10%)
+       piyush.luktuke@yahoo.com                  93  (0.10%)
+       pinakincs@yahoo.com                       87  (0.09%)
+       ... and 44669 more unique values
+
+  ── LATEST_YEAR_ANNUAL_RETURN ──
+     unique values  : 70
+     null count     : 0
+     top 10 values  :
+       31-03-2017                            79,064  (82.51%)
+       31-03-2016                             4,436  (4.63%)
+       31-03-2015                             2,499  (2.61%)
+       31-03-2014                             2,125  (2.22%)
+       31-03-2013                             1,875  (1.96%)
+       31-03-2010                             1,136  (1.19%)
+       31-03-2012                             1,014  (1.06%)
+       31-03-2011                               971  (1.01%)
+       31-03-2009                               772  (0.81%)
+       31-03-2006                               714  (0.75%)
+       ... and 60 more unique values
+
+  ── LATEST_YEAR_FINANCIAL_STATEMENT ──
+     unique values  : 61
+     null count     : 0
+     top 10 values  :
+       31-03-2017                            78,813  (82.25%)
+       31-03-2016                             4,695  (4.90%)
+       31-03-2015                             2,484  (2.59%)
+       31-03-2014                             2,071  (2.16%)
+       31-03-2013                             1,927  (2.01%)
+       31-03-2010                             1,150  (1.20%)
+       31-03-2012                             1,023  (1.07%)
+       31-03-2011                             1,006  (1.05%)
+       31-03-2009                               797  (0.83%)
+       31-03-2006                               712  (0.74%)
+       ... and 51 more unique values
+
+  ── Registration_Month ──
+     unique values  : 12
+     null count     : 0
+     top 10 values  :
+       March                                 62,030  (64.73%)
+       February                               3,298  (3.44%)
+       April                                  3,257  (3.40%)
+       January                                3,244  (3.39%)
+       June                                   3,224  (3.36%)
+       July                                   3,159  (3.30%)
+       August                                 3,157  (3.29%)
+       May                                    3,134  (3.27%)
+       September                              3,080  (3.21%)
+       December                               3,015  (3.15%)
+       ... and 2 more unique values
+
+  ── Email_Domain ──
+     unique values  : 9,354
+     null count     : 0
+     top 10 values  :
+       gmail.com                             28,724  (29.98%)
+       rediffmail.com                        26,425  (27.58%)
+       yahoo.com                              9,907  (10.34%)
+       yahoo.co.in                            6,462  (6.74%)
+       hotmail.com                            2,667  (2.78%)
+       yahoo.in                               1,132  (1.18%)
+       drdcs.net                              1,055  (1.10%)
+       ymail.com                                313  (0.33%)
+       sify.com                                 171  (0.18%)
+       outlook.com                              146  (0.15%)
+       ... and 9344 more unique values
+
+
+======================================================================
+  7. POTENTIAL DATETIME COLUMNS
+======================================================================
+
+  📅 'DATE_OF_REGISTRATION' looks like a datetime column (>70% values parseable).
+  📅 'LATEST_YEAR_ANNUAL_RETURN' looks like a datetime column (>70% values parseable).
+  📅 'LATEST_YEAR_FINANCIAL_STATEMENT' looks like a datetime column (>70% values parseable).
+
+======================================================================
+  8. CORRELATION MATRIX (numeric columns)
+======================================================================
+
+                                AUTHORIZED_CAPPAIDUP_CAPITALRegistration_YCompany_Age_YePaidup_to_AuthIs_Fully_PaidU
+  ------------------------------------------------------------------------------------------------------------------
+  AUTHORIZED_CAP                         1.000         0.888        -0.002         0.002        -0.008        -0.020
+  PAIDUP_CAPITAL                         0.888         1.000        -0.001         0.001         0.003        -0.013
+  Registration_Year                     -0.002        -0.001         1.000        -1.000         0.252         0.273
+  Company_Age_Years                      0.002         0.001        -1.000         1.000        -0.252        -0.273
+  Paidup_to_Authorized_Ratio            -0.008         0.003         0.252        -0.252         1.000         0.675
+  Is_Fully_PaidUp                       -0.020        -0.013         0.273        -0.273         0.675         1.000
+
+  📌 High correlations (|r| > 0.7, excluding self):
+     AUTHORIZED_CAP  ↔  PAIDUP_CAPITAL  :  r = 0.8879
+     Registration_Year  ↔  Company_Age_Years  :  r = -1.0000
+
+======================================================================
+  9. DATA QUALITY SUMMARY & RECOMMENDATIONS
+======================================================================
+
+  ⚠️  'AUTHORIZED_CAP' has 15337 outliers (16.0%) → cap/winsorise or log-transform
+  ℹ️  'AUTHORIZED_CAP' is highly skewed (skew=138.60) → consider log/sqrt transform
+  ⚠️  'PAIDUP_CAPITAL' has 18297 outliers (19.1%) → cap/winsorise or log-transform
+  ℹ️  'PAIDUP_CAPITAL' is highly skewed (skew=207.91) → consider log/sqrt transform
+  ⚠️  'Registration_Year' has 36361 outliers (37.9%) → cap/winsorise or log-transform
+  ℹ️  'Registration_Year' is highly skewed (skew=-2.70) → consider log/sqrt transform
+  ⚠️  'Company_Age_Years' has 36361 outliers (37.9%) → cap/winsorise or log-transform
+  ℹ️  'Company_Age_Years' is highly skewed (skew=2.70) → consider log/sqrt transform
+  ℹ️  'Paidup_to_Authorized_Ratio' is highly skewed (skew=8.05) → consider log/sqrt transform
+  ℹ️  'CORPORATE_IDENTIFICATION_NUMBER' has very high cardinality (95826 unique) → might be an ID column
+  ℹ️  'COMPANY_NAME' has very high cardinality (95506 unique) → might be an ID column
+  ℹ️  'DATE_OF_REGISTRATION' → parse as datetime with pd.to_datetime()
+  ℹ️  'LATEST_YEAR_ANNUAL_RETURN' → parse as datetime with pd.to_datetime()
+  ℹ️  'LATEST_YEAR_FINANCIAL_STATEMENT' → parse as datetime with pd.to_datetime()
+
+======================================================================
+  Analysis generated : 2026-05-27 07:57:48
+  Tool               : csv_analyser.py  (pandas mode)
+======================================================================
