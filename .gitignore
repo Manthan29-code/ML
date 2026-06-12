@@ -1,2 +1,6 @@
 venv/.
 venv
+*.joblib
+mca_gujarat_dataset\pkl_zip
+mca_gujarat_dataset/pkl_zip.zip
+mca_gujarat_dataset/RandomForest_pipeline.joblib
