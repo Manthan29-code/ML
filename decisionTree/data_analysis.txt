@@ -1,0 +1,305 @@
+
+======================================================================
+  1. DATASET OVERVIEW
+======================================================================
+
+  File            : adult.csv
+  Rows            : 32,561
+  Columns         : 15
+  Total cells     : 488,415
+  Duplicate rows  : 24
+  Memory usage    : 18070.4 KB
+
+  Columns : ['age', 'workclass', 'fnlwgt', 'education', 'education.num', 'marital.status', 'occupation', 'relationship', 'race', 'sex', 'capital.gain', 'capital.loss', 'hours.per.week', 'native.country', 'income']
+
+======================================================================
+  2. DATA TYPES & COLUMN INFO
+======================================================================
+
+  Column                         Dtype             Non-Null     Null    Null%
+  ---------------------------------------------------------------------------
+  age                            int64               32,561        0    0.00%
+  workclass                      object              32,561        0    0.00%
+  fnlwgt                         int64               32,561        0    0.00%
+  education                      object              32,561        0    0.00%
+  education.num                  int64               32,561        0    0.00%
+  marital.status                 object              32,561        0    0.00%
+  occupation                     object              32,561        0    0.00%
+  relationship                   object              32,561        0    0.00%
+  race                           object              32,561        0    0.00%
+  sex                            object              32,561        0    0.00%
+  capital.gain                   int64               32,561        0    0.00%
+  capital.loss                   int64               32,561        0    0.00%
+  hours.per.week                 int64               32,561        0    0.00%
+  native.country                 object              32,561        0    0.00%
+  income                         object              32,561        0    0.00%
+
+======================================================================
+  3. MISSING VALUE ANALYSIS
+======================================================================
+
+  ✅  No missing values found.
+
+======================================================================
+  4. NUMERIC COLUMNS — DESCRIPTIVE STATISTICS
+======================================================================
+
+  Numeric columns (6): ['age', 'fnlwgt', 'education.num', 'capital.gain', 'capital.loss', 'hours.per.week']
+
+  ── age ──
+     count   : 32,561
+     mean    : 38.5816
+     std     : 13.6404
+     min     : 17.0000
+     25%     : 28.0000
+     50%     : 37.0000
+     75%     : 48.0000
+     max     : 90.0000
+     skew    : 0.5587  (right-skewed)
+     kurtosis: -0.1661
+     zeros   : 0
+     negatives: 0
+     unique  : 73
+
+  ── fnlwgt ──
+     count   : 32,561
+     mean    : 189778.3665
+     std     : 105549.9777
+     min     : 12285.0000
+     25%     : 117827.0000
+     50%     : 178356.0000
+     75%     : 237051.0000
+     max     : 1484705.0000
+     skew    : 1.4470  (right-skewed)
+     kurtosis: 6.2188
+     zeros   : 0
+     negatives: 0
+     unique  : 21,648
+
+  ── education.num ──
+     count   : 32,561
+     mean    : 10.0807
+     std     : 2.5727
+     min     : 1.0000
+     25%     : 9.0000
+     50%     : 10.0000
+     75%     : 12.0000
+     max     : 16.0000
+     skew    : -0.3117  (approx. normal)
+     kurtosis: 0.6234
+     zeros   : 0
+     negatives: 0
+     unique  : 16
+
+  ── capital.gain ──
+     count   : 32,561
+     mean    : 1077.6488
+     std     : 7385.2921
+     min     : 0.0000
+     25%     : 0.0000
+     50%     : 0.0000
+     75%     : 0.0000
+     max     : 99999.0000
+     skew    : 11.9538  (right-skewed)
+     kurtosis: 154.7994
+     zeros   : 29,849
+     negatives: 0
+     unique  : 119
+
+  ── capital.loss ──
+     count   : 32,561
+     mean    : 87.3038
+     std     : 402.9602
+     min     : 0.0000
+     25%     : 0.0000
+     50%     : 0.0000
+     75%     : 0.0000
+     max     : 4356.0000
+     skew    : 4.5946  (right-skewed)
+     kurtosis: 20.3768
+     zeros   : 31,042
+     negatives: 0
+     unique  : 92
+
+  ── hours.per.week ──
+     count   : 32,561
+     mean    : 40.4375
+     std     : 12.3474
+     min     : 1.0000
+     25%     : 40.0000
+     50%     : 40.0000
+     75%     : 45.0000
+     max     : 99.0000
+     skew    : 0.2276  (approx. normal)
+     kurtosis: 2.9167
+     zeros   : 0
+     negatives: 0
+     unique  : 94
+
+
+======================================================================
+  5. OUTLIER DETECTION (IQR method, 1.5×IQR rule)
+======================================================================
+
+  Column                           Outliers   Outlier%     Lower fence     Upper fence
+  -------------------------------------------------------------------------------------
+  age                                   143      0.44%         -2.0000         78.0000
+  fnlwgt                                992      3.05%     -61009.0000     415887.0000
+  education.num                       1,198      3.68%          4.5000         16.5000
+  capital.gain                        2,712      8.33%          0.0000          0.0000
+  capital.loss                        1,519      4.67%          0.0000          0.0000
+  hours.per.week                      9,008     27.66%         32.5000         52.5000
+
+======================================================================
+  6. CATEGORICAL COLUMNS — VALUE DISTRIBUTION
+======================================================================
+
+  Categorical columns (9): ['workclass', 'education', 'marital.status', 'occupation', 'relationship', 'race', 'sex', 'native.country', 'income']
+
+  ── workclass ──
+     unique values  : 9
+     null count     : 0
+     top 10 values  :
+       Private                               22,696  (69.70%)
+       Self-emp-not-inc                       2,541  (7.80%)
+       Local-gov                              2,093  (6.43%)
+       ?                                      1,836  (5.64%)
+       State-gov                              1,298  (3.99%)
+       Self-emp-inc                           1,116  (3.43%)
+       Federal-gov                              960  (2.95%)
+       Without-pay                               14  (0.04%)
+       Never-worked                               7  (0.02%)
+
+  ── education ──
+     unique values  : 16
+     null count     : 0
+     top 10 values  :
+       HS-grad                               10,501  (32.25%)
+       Some-college                           7,291  (22.39%)
+       Bachelors                              5,355  (16.45%)
+       Masters                                1,723  (5.29%)
+       Assoc-voc                              1,382  (4.24%)
+       11th                                   1,175  (3.61%)
+       Assoc-acdm                             1,067  (3.28%)
+       10th                                     933  (2.87%)
+       7th-8th                                  646  (1.98%)
+       Prof-school                              576  (1.77%)
+       ... and 6 more unique values
+
+  ── marital.status ──
+     unique values  : 7
+     null count     : 0
+     top 10 values  :
+       Married-civ-spouse                    14,976  (45.99%)
+       Never-married                         10,683  (32.81%)
+       Divorced                               4,443  (13.65%)
+       Separated                              1,025  (3.15%)
+       Widowed                                  993  (3.05%)
+       Married-spouse-absent                    418  (1.28%)
+       Married-AF-spouse                         23  (0.07%)
+
+  ── occupation ──
+     unique values  : 15
+     null count     : 0
+     top 10 values  :
+       Prof-specialty                         4,140  (12.71%)
+       Craft-repair                           4,099  (12.59%)
+       Exec-managerial                        4,066  (12.49%)
+       Adm-clerical                           3,770  (11.58%)
+       Sales                                  3,650  (11.21%)
+       Other-service                          3,295  (10.12%)
+       Machine-op-inspct                      2,002  (6.15%)
+       ?                                      1,843  (5.66%)
+       Transport-moving                       1,597  (4.90%)
+       Handlers-cleaners                      1,370  (4.21%)
+       ... and 5 more unique values
+
+  ── relationship ──
+     unique values  : 6
+     null count     : 0
+     top 10 values  :
+       Husband                               13,193  (40.52%)
+       Not-in-family                          8,305  (25.51%)
+       Own-child                              5,068  (15.56%)
+       Unmarried                              3,446  (10.58%)
+       Wife                                   1,568  (4.82%)
+       Other-relative                           981  (3.01%)
+
+  ── race ──
+     unique values  : 5
+     null count     : 0
+     top 10 values  :
+       White                                 27,816  (85.43%)
+       Black                                  3,124  (9.59%)
+       Asian-Pac-Islander                     1,039  (3.19%)
+       Amer-Indian-Eskimo                       311  (0.96%)
+       Other                                    271  (0.83%)
+
+  ── sex ──
+     unique values  : 2
+     null count     : 0
+     top 10 values  :
+       Male                                  21,790  (66.92%)
+       Female                                10,771  (33.08%)
+
+  ── native.country ──
+     unique values  : 42
+     null count     : 0
+     top 10 values  :
+       United-States                         29,170  (89.59%)
+       Mexico                                   643  (1.97%)
+       ?                                        583  (1.79%)
+       Philippines                              198  (0.61%)
+       Germany                                  137  (0.42%)
+       Canada                                   121  (0.37%)
+       Puerto-Rico                              114  (0.35%)
+       El-Salvador                              106  (0.33%)
+       India                                    100  (0.31%)
+       Cuba                                      95  (0.29%)
+       ... and 32 more unique values
+
+  ── income ──
+     unique values  : 2
+     null count     : 0
+     top 10 values  :
+       <=50K                                 24,720  (75.92%)
+       >50K                                   7,841  (24.08%)
+
+
+======================================================================
+  7. POTENTIAL DATETIME COLUMNS
+======================================================================
+
+  No obvious datetime columns detected (check manually).
+
+======================================================================
+  8. CORRELATION MATRIX (numeric columns)
+======================================================================
+
+                                           age        fnlwgt education.num  capital.gain  capital.losshours.per.week
+  ------------------------------------------------------------------------------------------------------------------
+  age                                    1.000        -0.077         0.037         0.078         0.058         0.069
+  fnlwgt                                -0.077         1.000        -0.043         0.000        -0.010        -0.019
+  education.num                          0.037        -0.043         1.000         0.123         0.080         0.148
+  capital.gain                           0.078         0.000         0.123         1.000        -0.032         0.078
+  capital.loss                           0.058        -0.010         0.080        -0.032         1.000         0.054
+  hours.per.week                         0.069        -0.019         0.148         0.078         0.054         1.000
+
+  📌 High correlations (|r| > 0.7, excluding self):
+     None found.
+
+======================================================================
+  9. DATA QUALITY SUMMARY & RECOMMENDATIONS
+======================================================================
+
+  ⚠️  24 duplicate rows → consider df.drop_duplicates()
+  ℹ️  'fnlwgt' is highly skewed (skew=1.45) → consider log/sqrt transform
+  ⚠️  'capital.gain' has 2712 outliers (8.3%) → cap/winsorise or log-transform
+  ℹ️  'capital.gain' is highly skewed (skew=11.95) → consider log/sqrt transform
+  ℹ️  'capital.loss' is highly skewed (skew=4.59) → consider log/sqrt transform
+  ⚠️  'hours.per.week' has 9008 outliers (27.7%) → cap/winsorise or log-transform
+
+======================================================================
+  Analysis generated : 2026-07-21 14:50:43
+  Tool               : csv_analyser.py  (pandas mode)
+======================================================================
