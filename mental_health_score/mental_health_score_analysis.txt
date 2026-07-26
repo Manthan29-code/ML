@@ -1,0 +1,317 @@
+
+======================================================================
+  1. DATASET OVERVIEW
+======================================================================
+
+  File             : mental_health_score.csv
+  Rows             : 5,000
+  Columns          : 13
+  Total cells      : 65,000
+  Duplicate rows   : 2
+  Memory usage     : 1937.6 KB
+
+  Columns : ['Age', 'Gender', 'Country', 'Academic_Level', 'Most_Used_Platform', 'Purpose_Of_Use', 'Avg_Daily_Usage_Hours', 'Daily_Unlocks', 'Study_Hours', 'Physical_Activity_Hours', 'Sleep_Hours_Per_Night', 'Stress_Level', 'Mental_Health_Score']
+
+======================================================================
+  2. DATA TYPES & COLUMN INFO
+======================================================================
+
+  Column                         Dtype             Non-Null     Null    Null%
+  ---------------------------------------------------------------------------
+  Age                            int64                5,000        0    0.00%
+  Gender                         object               5,000        0    0.00%
+  Country                        object               5,000        0    0.00%
+  Academic_Level                 object               5,000        0    0.00%
+  Most_Used_Platform             object               5,000        0    0.00%
+  Purpose_Of_Use                 object               5,000        0    0.00%
+  Avg_Daily_Usage_Hours          float64              5,000        0    0.00%
+  Daily_Unlocks                  int64                5,000        0    0.00%
+  Study_Hours                    float64              5,000        0    0.00%
+  Physical_Activity_Hours        float64              5,000        0    0.00%
+  Sleep_Hours_Per_Night          float64              5,000        0    0.00%
+  Stress_Level                   object               5,000        0    0.00%
+  Mental_Health_Score            float64              5,000        0    0.00%
+
+======================================================================
+  3. MISSING VALUE ANALYSIS
+======================================================================
+
+  ✅  No missing values found.
+
+======================================================================
+  4. NUMERIC COLUMNS — DESCRIPTIVE STATISTICS
+======================================================================
+
+  Numeric columns (7): ['Age', 'Avg_Daily_Usage_Hours', 'Daily_Unlocks', 'Study_Hours', 'Physical_Activity_Hours', 'Sleep_Hours_Per_Night', 'Mental_Health_Score']
+
+  ── Age ──
+     count   : 5,000
+     mean    : 20.8218
+     std     : 1.7366
+     min     : 18.0000
+     25%     : 19.0000
+     50%     : 21.0000
+     75%     : 22.0000
+     max     : 24.0000
+     skew    : 0.1553  (approx. normal)
+     kurtosis: -0.9129
+     zeros   : 0
+     negatives: 0
+     unique  : 7
+
+  ── Avg_Daily_Usage_Hours ──
+     count   : 5,000
+     mean    : 5.0785
+     std     : 1.6539
+     min     : 1.0000
+     25%     : 3.8000
+     50%     : 5.0000
+     75%     : 6.3000
+     max     : 8.8000
+     skew    : 0.0056  (approx. normal)
+     kurtosis: -0.7676
+     zeros   : 0
+     negatives: 0
+     unique  : 79
+
+  ── Daily_Unlocks ──
+     count   : 5,000
+     mean    : 171.4526
+     std     : 42.8583
+     min     : 62.0000
+     25%     : 140.0000
+     50%     : 171.0000
+     75%     : 204.0000
+     max     : 273.0000
+     skew    : 0.0024  (approx. normal)
+     kurtosis: -0.7091
+     zeros   : 0
+     negatives: 0
+     unique  : 200
+
+  ── Study_Hours ──
+     count   : 5,000
+     mean    : 3.0084
+     std     : 1.6370
+     min     : 0.3000
+     25%     : 1.5000
+     50%     : 2.8000
+     75%     : 4.2000
+     max     : 8.3000
+     skew    : 0.4358  (approx. normal)
+     kurtosis: -0.7266
+     zeros   : 0
+     negatives: 0
+     unique  : 76
+
+  ── Physical_Activity_Hours ──
+     count   : 5,000
+     mean    : 1.7510
+     std     : 0.6684
+     min     : -0.4000
+     25%     : 1.3000
+     50%     : 1.7000
+     75%     : 2.2000
+     max     : 4.1000
+     skew    : 0.0400  (approx. normal)
+     kurtosis: -0.2256
+     zeros   : 13
+     negatives: 10
+     unique  : 44
+
+  ── Sleep_Hours_Per_Night ──
+     count   : 5,000
+     mean    : 6.6346
+     std     : 1.2214
+     min     : 3.6000
+     25%     : 5.6000
+     50%     : 6.6000
+     75%     : 7.5000
+     max     : 9.9000
+     skew    : 0.1240  (approx. normal)
+     kurtosis: -0.8795
+     zeros   : 0
+     negatives: 0
+     unique  : 63
+
+  ── Mental_Health_Score ──
+     count   : 5,000
+     mean    : 6.2310
+     std     : 1.2787
+     min     : 3.6000
+     25%     : 5.1000
+     50%     : 6.1000
+     75%     : 7.1000
+     max     : 9.4000
+     skew    : 0.2066  (approx. normal)
+     kurtosis: -0.8033
+     zeros   : 0
+     negatives: 0
+     unique  : 59
+
+
+======================================================================
+  5. OUTLIER DETECTION (IQR method, 1.5×IQR rule)
+======================================================================
+
+  Column                           Outliers   Outlier%     Lower fence     Upper fence
+  -------------------------------------------------------------------------------------
+  Age                                     0      0.00%         14.5000         26.5000
+  Avg_Daily_Usage_Hours                   0      0.00%          0.0500         10.0500
+  Daily_Unlocks                           0      0.00%         44.0000        300.0000
+  Study_Hours                             2      0.04%         -2.5500          8.2500
+  Physical_Activity_Hours                22      0.44%         -0.0500          3.5500
+  Sleep_Hours_Per_Night                   0      0.00%          2.7500         10.3500
+  Mental_Health_Score                     0      0.00%          2.1000         10.1000
+
+======================================================================
+  6. CATEGORICAL COLUMNS — VALUE DISTRIBUTION
+======================================================================
+
+  Categorical columns (6): ['Gender', 'Country', 'Academic_Level', 'Most_Used_Platform', 'Purpose_Of_Use', 'Stress_Level']
+
+  ── Gender ──
+     unique values  : 2
+     null count     : 0
+     top 10 values  :
+       Male                                   2,635  (52.70%)
+       Female                                 2,365  (47.30%)
+
+  ── Country ──
+     unique values  : 111
+     null count     : 0
+     top 10 values  :
+       Other                                  1,880  (37.60%)
+       India                                    389  (7.78%)
+       USA                                      355  (7.10%)
+       Canada                                   230  (4.60%)
+       Australia                                198  (3.96%)
+       UK                                       185  (3.70%)
+       Germany                                  136  (2.72%)
+       Mexico                                    94  (1.88%)
+       Turkey                                    94  (1.88%)
+       France                                    87  (1.74%)
+       ... and 101 more unique values
+
+  ── Academic_Level ──
+     unique values  : 3
+     null count     : 0
+     top 10 values  :
+       Undergraduate                          3,632  (72.64%)
+       Graduate                                 918  (18.36%)
+       High School                              450  (9.00%)
+
+  ── Most_Used_Platform ──
+     unique values  : 12
+     null count     : 0
+     top 10 values  :
+       Instagram                              1,130  (22.60%)
+       TikTok                                   918  (18.36%)
+       Facebook                                 719  (14.38%)
+       LinkedIn                                 523  (10.46%)
+       YouTube                                  491  (9.82%)
+       Twitter                                  462  (9.24%)
+       Snapchat                                 420  (8.40%)
+       WhatsApp                                 175  (3.50%)
+       LINE                                      50  (1.00%)
+       VKontakte                                 40  (0.80%)
+       ... and 2 more unique values
+
+  ── Purpose_Of_Use ──
+     unique values  : 4
+     null count     : 0
+     top 10 values  :
+       Entertainment                          2,552  (51.04%)
+       Education                              1,094  (21.88%)
+       Networking                               793  (15.86%)
+       News                                     561  (11.22%)
+
+  ── Stress_Level ──
+     unique values  : 4
+     null count     : 0
+     top 10 values  :
+       Very High                              1,621  (32.42%)
+       High                                   1,440  (28.80%)
+       Medium                                 1,295  (25.90%)
+       Low                                      644  (12.88%)
+
+
+======================================================================
+  7. POTENTIAL DATETIME COLUMNS
+======================================================================
+
+  No obvious datetime columns detected (check manually).
+
+======================================================================
+  8. CORRELATION MATRIX (numeric columns)
+======================================================================
+
+                                           AgeAvg_Daily_Usag Daily_Unlocks   Study_HoursPhysical_ActivSleep_Hours_PeMental_Health_
+  --------------------------------------------------------------------------------------------------------------------------------
+  Age                                    1.000        -0.070        -0.074         0.083         0.013         0.089         0.101
+  Avg_Daily_Usage_Hours                 -0.070         1.000         0.960        -0.879        -0.626        -0.808        -0.816
+  Daily_Unlocks                         -0.074         0.960         1.000        -0.853        -0.603        -0.782        -0.791
+  Study_Hours                            0.083        -0.879        -0.853         1.000         0.561         0.730         0.753
+  Physical_Activity_Hours                0.013        -0.626        -0.603         0.561         1.000         0.508         0.521
+  Sleep_Hours_Per_Night                  0.089        -0.808        -0.782         0.730         0.508         1.000         0.766
+  Mental_Health_Score                    0.101        -0.816        -0.791         0.753         0.521         0.766         1.000
+
+  📌 High correlations (|r| > 0.7, excluding self):
+     Avg_Daily_Usage_Hours  ↔  Daily_Unlocks  :  r = 0.9602
+     Avg_Daily_Usage_Hours  ↔  Study_Hours  :  r = -0.8786
+     Avg_Daily_Usage_Hours  ↔  Sleep_Hours_Per_Night  :  r = -0.8084
+     Avg_Daily_Usage_Hours  ↔  Mental_Health_Score  :  r = -0.8165
+     Daily_Unlocks  ↔  Study_Hours  :  r = -0.8534
+     Daily_Unlocks  ↔  Sleep_Hours_Per_Night  :  r = -0.7818
+     Daily_Unlocks  ↔  Mental_Health_Score  :  r = -0.7909
+     Study_Hours  ↔  Sleep_Hours_Per_Night  :  r = 0.7301
+     Study_Hours  ↔  Mental_Health_Score  :  r = 0.7526
+     Sleep_Hours_Per_Night  ↔  Mental_Health_Score  :  r = 0.7664
+
+======================================================================
+  9. ADVANCED NON-VISUAL DIAGNOSTICS
+======================================================================
+
+  ── Distribution Shape & Artifact Checks ──
+  ── Age ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.91 < -0.7)
+     ⚠️ ARTIFICIAL MIN CAP (9.0% values sit exactly at min: 18)
+     ⚠️ ARTIFICIAL MAX CAP (8.4% values sit exactly at max: 24)
+
+  ── Avg_Daily_Usage_Hours ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.77 < -0.7)
+
+  ── Daily_Unlocks ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.71 < -0.7)
+
+  ── Study_Hours ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.73 < -0.7)
+
+  ── Sleep_Hours_Per_Night ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.88 < -0.7)
+
+  ── Mental_Health_Score ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.80 < -0.7)
+
+  ── Non-Linear Relationship Screening (Mutual Info vs Pearson r) ──
+  ⚠️ NON-LINEAR DEPENDENCY: Age ↔ Daily_Unlocks (Pearson r = -0.07, Mutual Info = 0.26)
+
+======================================================================
+  10. DATA QUALITY SUMMARY & RECOMMENDATIONS
+======================================================================
+
+  ⚠️  2 duplicate rows → consider df.drop_duplicates()
+  ⚠️  [Diagnostic Warning] 'Age': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.91 < -0.7)
+  ⚠️  [Diagnostic Warning] 'Age': ⚠️ ARTIFICIAL MIN CAP (9.0% values sit exactly at min: 18)
+  ⚠️  [Diagnostic Warning] 'Age': ⚠️ ARTIFICIAL MAX CAP (8.4% values sit exactly at max: 24)
+  ⚠️  [Diagnostic Warning] 'Avg_Daily_Usage_Hours': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.77 < -0.7)
+  ⚠️  [Diagnostic Warning] 'Daily_Unlocks': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.71 < -0.7)
+  ⚠️  [Diagnostic Warning] 'Study_Hours': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.73 < -0.7)
+  ⚠️  [Diagnostic Warning] 'Sleep_Hours_Per_Night': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.88 < -0.7)
+  ⚠️  [Diagnostic Warning] 'Mental_Health_Score': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -0.80 < -0.7)
+  ⚠️  [Diagnostic Warning] Non-linear pair 'Age' ↔ 'Daily_Unlocks' (r=-0.07, MI=0.26)
+
+======================================================================
+  Analysis generated : 2026-07-26 11:19:37
+  Tool               : csv_analyser.py  (pandas mode with advanced diagnostics)
+======================================================================
