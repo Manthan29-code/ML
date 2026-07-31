@@ -1,0 +1,200 @@
+
+======================================================================
+  1. DATASET OVERVIEW
+======================================================================
+
+  File             : Iris.csv
+  Rows             : 150
+  Columns          : 6
+  Total cells      : 900
+  Duplicate rows   : 0
+  Memory usage     : 15.1 KB
+
+  Columns : ['Id', 'SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species']
+
+======================================================================
+  2. DATA TYPES & COLUMN INFO
+======================================================================
+
+  Column                         Dtype             Non-Null     Null    Null%
+  ---------------------------------------------------------------------------
+  Id                             int64                  150        0    0.00%
+  SepalLengthCm                  float64                150        0    0.00%
+  SepalWidthCm                   float64                150        0    0.00%
+  PetalLengthCm                  float64                150        0    0.00%
+  PetalWidthCm                   float64                150        0    0.00%
+  Species                        object                 150        0    0.00%
+
+======================================================================
+  3. MISSING VALUE ANALYSIS
+======================================================================
+
+  ✅  No missing values found.
+
+======================================================================
+  4. NUMERIC COLUMNS — DESCRIPTIVE STATISTICS
+======================================================================
+
+  Numeric columns (5): ['Id', 'SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']
+
+  ── Id ──
+     count   : 150
+     mean    : 75.5000
+     std     : 43.4454
+     min     : 1.0000
+     25%     : 38.2500
+     50%     : 75.5000
+     75%     : 112.7500
+     max     : 150.0000
+     skew    : 0.0000  (approx. normal)
+     kurtosis: -1.2000
+     zeros   : 0
+     negatives: 0
+     unique  : 150
+
+  ── SepalLengthCm ──
+     count   : 150
+     mean    : 5.8433
+     std     : 0.8281
+     min     : 4.3000
+     25%     : 5.1000
+     50%     : 5.8000
+     75%     : 6.4000
+     max     : 7.9000
+     skew    : 0.3149  (approx. normal)
+     kurtosis: -0.5521
+     zeros   : 0
+     negatives: 0
+     unique  : 35
+
+  ── SepalWidthCm ──
+     count   : 150
+     mean    : 3.0540
+     std     : 0.4336
+     min     : 2.0000
+     25%     : 2.8000
+     50%     : 3.0000
+     75%     : 3.3000
+     max     : 4.4000
+     skew    : 0.3341  (approx. normal)
+     kurtosis: 0.2908
+     zeros   : 0
+     negatives: 0
+     unique  : 23
+
+  ── PetalLengthCm ──
+     count   : 150
+     mean    : 3.7587
+     std     : 1.7644
+     min     : 1.0000
+     25%     : 1.6000
+     50%     : 4.3500
+     75%     : 5.1000
+     max     : 6.9000
+     skew    : -0.2745  (approx. normal)
+     kurtosis: -1.4019
+     zeros   : 0
+     negatives: 0
+     unique  : 43
+
+  ── PetalWidthCm ──
+     count   : 150
+     mean    : 1.1987
+     std     : 0.7632
+     min     : 0.1000
+     25%     : 0.3000
+     50%     : 1.3000
+     75%     : 1.8000
+     max     : 2.5000
+     skew    : -0.1050  (approx. normal)
+     kurtosis: -1.3398
+     zeros   : 0
+     negatives: 0
+     unique  : 22
+
+
+======================================================================
+  5. OUTLIER DETECTION (IQR method, 1.5×IQR rule)
+======================================================================
+
+  Column                           Outliers   Outlier%     Lower fence     Upper fence
+  -------------------------------------------------------------------------------------
+  Id                                      0      0.00%        -73.5000        224.5000
+  SepalLengthCm                           0      0.00%          3.1500          8.3500
+  SepalWidthCm                            4      2.67%          2.0500          4.0500
+  PetalLengthCm                           0      0.00%         -3.6500         10.3500
+  PetalWidthCm                            0      0.00%         -1.9500          4.0500
+
+======================================================================
+  6. CATEGORICAL COLUMNS — VALUE DISTRIBUTION
+======================================================================
+
+  Categorical columns (1): ['Species']
+
+  ── Species ──
+     unique values  : 3
+     null count     : 0
+     top 10 values  :
+       Iris-setosa                               50  (33.33%)
+       Iris-versicolor                           50  (33.33%)
+       Iris-virginica                            50  (33.33%)
+
+
+======================================================================
+  7. POTENTIAL DATETIME COLUMNS
+======================================================================
+
+  No obvious datetime columns detected (check manually).
+
+======================================================================
+  8. CORRELATION MATRIX (numeric columns)
+======================================================================
+
+                                            Id SepalLengthCm  SepalWidthCm PetalLengthCm  PetalWidthCm
+  ----------------------------------------------------------------------------------------------------
+  Id                                     1.000         0.717        -0.398         0.883         0.900
+  SepalLengthCm                          0.717         1.000        -0.109         0.872         0.818
+  SepalWidthCm                          -0.398        -0.109         1.000        -0.421        -0.357
+  PetalLengthCm                          0.883         0.872        -0.421         1.000         0.963
+  PetalWidthCm                           0.900         0.818        -0.357         0.963         1.000
+
+  📌 High correlations (|r| > 0.7, excluding self):
+     Id  ↔  SepalLengthCm  :  r = 0.7167
+     Id  ↔  PetalLengthCm  :  r = 0.8827
+     Id  ↔  PetalWidthCm  :  r = 0.8998
+     SepalLengthCm  ↔  PetalLengthCm  :  r = 0.8718
+     SepalLengthCm  ↔  PetalWidthCm  :  r = 0.8180
+     PetalLengthCm  ↔  PetalWidthCm  :  r = 0.9628
+
+======================================================================
+  9. ADVANCED NON-VISUAL DIAGNOSTICS
+======================================================================
+
+  ── Distribution Shape & Artifact Checks ──
+  ── Id ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.20 < -0.7)
+
+  ── PetalLengthCm ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.40 < -0.7)
+
+  ── PetalWidthCm ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.34 < -0.7)
+     ⚠️ ARTIFICIAL MIN CAP (4.0% values sit exactly at min: 0.1)
+
+  ── Non-Linear Relationship Screening (Mutual Info vs Pearson r) ──
+  ⚠️ NON-LINEAR DEPENDENCY: SepalLengthCm ↔ SepalWidthCm (Pearson r = -0.11, Mutual Info = 0.24)
+
+======================================================================
+  10. DATA QUALITY SUMMARY & RECOMMENDATIONS
+======================================================================
+
+  ⚠️  [Diagnostic Warning] 'Id': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.20 < -0.7)
+  ⚠️  [Diagnostic Warning] 'PetalLengthCm': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.40 < -0.7)
+  ⚠️  [Diagnostic Warning] 'PetalWidthCm': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.34 < -0.7)
+  ⚠️  [Diagnostic Warning] 'PetalWidthCm': ⚠️ ARTIFICIAL MIN CAP (4.0% values sit exactly at min: 0.1)
+  ⚠️  [Diagnostic Warning] Non-linear pair 'SepalLengthCm' ↔ 'SepalWidthCm' (r=-0.11, MI=0.24)
+
+======================================================================
+  Analysis generated : 2026-07-31 09:52:57
+  Tool               : csv_analyser.py  (pandas mode with advanced diagnostics)
+======================================================================
