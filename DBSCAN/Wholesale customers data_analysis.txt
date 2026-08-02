@@ -1,0 +1,251 @@
+
+======================================================================
+  1. DATASET OVERVIEW
+======================================================================
+
+  File             : Wholesale customers data.csv
+  Rows             : 440
+  Columns          : 8
+  Total cells      : 3,520
+  Duplicate rows   : 0
+  Memory usage     : 27.6 KB
+
+  Columns : ['Channel', 'Region', 'Fresh', 'Milk', 'Grocery', 'Frozen', 'Detergents_Paper', 'Delicassen']
+
+======================================================================
+  2. DATA TYPES & COLUMN INFO
+======================================================================
+
+  Column                         Dtype             Non-Null     Null    Null%
+  ---------------------------------------------------------------------------
+  Channel                        int64                  440        0    0.00%
+  Region                         int64                  440        0    0.00%
+  Fresh                          int64                  440        0    0.00%
+  Milk                           int64                  440        0    0.00%
+  Grocery                        int64                  440        0    0.00%
+  Frozen                         int64                  440        0    0.00%
+  Detergents_Paper               int64                  440        0    0.00%
+  Delicassen                     int64                  440        0    0.00%
+
+======================================================================
+  3. MISSING VALUE ANALYSIS
+======================================================================
+
+  ✅  No missing values found.
+
+======================================================================
+  4. NUMERIC COLUMNS — DESCRIPTIVE STATISTICS
+======================================================================
+
+  Numeric columns (8): ['Channel', 'Region', 'Fresh', 'Milk', 'Grocery', 'Frozen', 'Detergents_Paper', 'Delicassen']
+
+  ── Channel ──
+     count   : 440
+     mean    : 1.3227
+     std     : 0.4681
+     min     : 1.0000
+     25%     : 1.0000
+     50%     : 1.0000
+     75%     : 2.0000
+     max     : 2.0000
+     skew    : 0.7610  (right-skewed)
+     kurtosis: -1.4275
+     zeros   : 0
+     negatives: 0
+     unique  : 2
+
+  ── Region ──
+     count   : 440
+     mean    : 2.5432
+     std     : 0.7743
+     min     : 1.0000
+     25%     : 2.0000
+     50%     : 3.0000
+     75%     : 3.0000
+     max     : 3.0000
+     skew    : -1.2836  (left-skewed)
+     kurtosis: -0.1001
+     zeros   : 0
+     negatives: 0
+     unique  : 3
+
+  ── Fresh ──
+     count   : 440
+     mean    : 12000.2977
+     std     : 12647.3289
+     min     : 3.0000
+     25%     : 3127.7500
+     50%     : 8504.0000
+     75%     : 16933.7500
+     max     : 112151.0000
+     skew    : 2.5613  (right-skewed)
+     kurtosis: 11.5364
+     zeros   : 0
+     negatives: 0
+     unique  : 433
+
+  ── Milk ──
+     count   : 440
+     mean    : 5796.2659
+     std     : 7380.3772
+     min     : 55.0000
+     25%     : 1533.0000
+     50%     : 3627.0000
+     75%     : 7190.2500
+     max     : 73498.0000
+     skew    : 4.0538  (right-skewed)
+     kurtosis: 24.6694
+     zeros   : 0
+     negatives: 0
+     unique  : 421
+
+  ── Grocery ──
+     count   : 440
+     mean    : 7951.2773
+     std     : 9503.1628
+     min     : 3.0000
+     25%     : 2153.0000
+     50%     : 4755.5000
+     75%     : 10655.7500
+     max     : 92780.0000
+     skew    : 3.5874  (right-skewed)
+     kurtosis: 20.9147
+     zeros   : 0
+     negatives: 0
+     unique  : 430
+
+  ── Frozen ──
+     count   : 440
+     mean    : 3071.9318
+     std     : 4854.6733
+     min     : 25.0000
+     25%     : 742.2500
+     50%     : 1526.0000
+     75%     : 3554.2500
+     max     : 60869.0000
+     skew    : 5.9080  (right-skewed)
+     kurtosis: 54.6893
+     zeros   : 0
+     negatives: 0
+     unique  : 426
+
+  ── Detergents_Paper ──
+     count   : 440
+     mean    : 2881.4932
+     std     : 4767.8544
+     min     : 3.0000
+     25%     : 256.7500
+     50%     : 816.5000
+     75%     : 3922.0000
+     max     : 40827.0000
+     skew    : 3.6319  (right-skewed)
+     kurtosis: 19.0095
+     zeros   : 0
+     negatives: 0
+     unique  : 417
+
+  ── Delicassen ──
+     count   : 440
+     mean    : 1524.8705
+     std     : 2820.1059
+     min     : 3.0000
+     25%     : 408.2500
+     50%     : 965.5000
+     75%     : 1820.2500
+     max     : 47943.0000
+     skew    : 11.1516  (right-skewed)
+     kurtosis: 170.6949
+     zeros   : 0
+     negatives: 0
+     unique  : 403
+
+
+======================================================================
+  5. OUTLIER DETECTION (IQR method, 1.5×IQR rule)
+======================================================================
+
+  Column                           Outliers   Outlier%     Lower fence     Upper fence
+  -------------------------------------------------------------------------------------
+  Channel                                 0      0.00%         -0.5000          3.5000
+  Region                                  0      0.00%          0.5000          4.5000
+  Fresh                                  20      4.55%     -17581.2500      37642.7500
+  Milk                                   28      6.36%      -6952.8750      15676.1250
+  Grocery                                24      5.45%     -10601.1250      23409.8750
+  Frozen                                 43      9.77%      -3475.7500       7772.2500
+  Detergents_Paper                       30      6.82%      -5241.1250       9419.8750
+  Delicassen                             27      6.14%      -1709.7500       3938.2500
+
+======================================================================
+  6. CATEGORICAL COLUMNS — VALUE DISTRIBUTION
+======================================================================
+
+  No categorical columns found.
+
+======================================================================
+  7. POTENTIAL DATETIME COLUMNS
+======================================================================
+
+  No obvious datetime columns detected (check manually).
+
+======================================================================
+  8. CORRELATION MATRIX (numeric columns)
+======================================================================
+
+                                       Channel        Region         Fresh          Milk       Grocery        FrozenDetergents_Pap    Delicassen
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+  Channel                                1.000         0.062        -0.169         0.461         0.609        -0.202         0.636         0.056
+  Region                                 0.062         1.000         0.055         0.032         0.008        -0.021        -0.001         0.045
+  Fresh                                 -0.169         0.055         1.000         0.101        -0.012         0.346        -0.102         0.245
+  Milk                                   0.461         0.032         0.101         1.000         0.728         0.124         0.662         0.406
+  Grocery                                0.609         0.008        -0.012         0.728         1.000        -0.040         0.925         0.205
+  Frozen                                -0.202        -0.021         0.346         0.124        -0.040         1.000        -0.132         0.391
+  Detergents_Paper                       0.636        -0.001        -0.102         0.662         0.925        -0.132         1.000         0.069
+  Delicassen                             0.056         0.045         0.245         0.406         0.205         0.391         0.069         1.000
+
+  📌 High correlations (|r| > 0.7, excluding self):
+     Milk  ↔  Grocery  :  r = 0.7283
+     Grocery  ↔  Detergents_Paper  :  r = 0.9246
+
+======================================================================
+  9. ADVANCED NON-VISUAL DIAGNOSTICS
+======================================================================
+
+  ── Distribution Shape & Artifact Checks ──
+  ── Channel ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.43 < -0.7)
+     ⚠️ ARTIFICIAL MIN CAP (67.7% values sit exactly at min: 1)
+     ⚠️ ARTIFICIAL MAX CAP (32.3% values sit exactly at max: 2)
+
+  ── Region ──
+     ⚠️ ARTIFICIAL MIN CAP (17.5% values sit exactly at min: 1)
+     ⚠️ ARTIFICIAL MAX CAP (71.8% values sit exactly at max: 3)
+
+  ── Non-Linear Relationship Screening (Mutual Info vs Pearson r) ──
+  ✅ No strong non-linear relationships detected.
+
+======================================================================
+  10. DATA QUALITY SUMMARY & RECOMMENDATIONS
+======================================================================
+
+  ℹ️  'Region' is highly skewed (skew=-1.28) → consider log/sqrt transform
+  ℹ️  'Fresh' is highly skewed (skew=2.56) → consider log/sqrt transform
+  ⚠️  'Milk' has 28 outliers (6.4%) → cap/winsorise or log-transform
+  ℹ️  'Milk' is highly skewed (skew=4.05) → consider log/sqrt transform
+  ⚠️  'Grocery' has 24 outliers (5.5%) → cap/winsorise or log-transform
+  ℹ️  'Grocery' is highly skewed (skew=3.59) → consider log/sqrt transform
+  ⚠️  'Frozen' has 43 outliers (9.8%) → cap/winsorise or log-transform
+  ℹ️  'Frozen' is highly skewed (skew=5.91) → consider log/sqrt transform
+  ⚠️  'Detergents_Paper' has 30 outliers (6.8%) → cap/winsorise or log-transform
+  ℹ️  'Detergents_Paper' is highly skewed (skew=3.63) → consider log/sqrt transform
+  ⚠️  'Delicassen' has 27 outliers (6.1%) → cap/winsorise or log-transform
+  ℹ️  'Delicassen' is highly skewed (skew=11.15) → consider log/sqrt transform
+  ⚠️  [Diagnostic Warning] 'Channel': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.43 < -0.7)
+  ⚠️  [Diagnostic Warning] 'Channel': ⚠️ ARTIFICIAL MIN CAP (67.7% values sit exactly at min: 1)
+  ⚠️  [Diagnostic Warning] 'Channel': ⚠️ ARTIFICIAL MAX CAP (32.3% values sit exactly at max: 2)
+  ⚠️  [Diagnostic Warning] 'Region': ⚠️ ARTIFICIAL MIN CAP (17.5% values sit exactly at min: 1)
+  ⚠️  [Diagnostic Warning] 'Region': ⚠️ ARTIFICIAL MAX CAP (71.8% values sit exactly at max: 3)
+
+======================================================================
+  Analysis generated : 2026-08-01 07:53:07
+  Tool               : csv_analyser.py  (pandas mode with advanced diagnostics)
+======================================================================
