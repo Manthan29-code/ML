@@ -1,0 +1,147 @@
+
+======================================================================
+  1. DATASET OVERVIEW
+======================================================================
+
+  File             : customers.csv
+  Rows             : 40
+  Columns          : 3
+  Total cells      : 120
+  Duplicate rows   : 0
+  Memory usage     : 3.0 KB
+
+  Columns : ['Name', 'AverageSpend', 'AverageFrequency']
+
+======================================================================
+  2. DATA TYPES & COLUMN INFO
+======================================================================
+
+  Column                         Dtype             Non-Null     Null    Null%
+  ---------------------------------------------------------------------------
+  Name                           object                  40        0    0.00%
+  AverageSpend                   float64                 40        0    0.00%
+  AverageFrequency               float64                 40        0    0.00%
+
+======================================================================
+  3. MISSING VALUE ANALYSIS
+======================================================================
+
+  ✅  No missing values found.
+
+======================================================================
+  4. NUMERIC COLUMNS — DESCRIPTIVE STATISTICS
+======================================================================
+
+  Numeric columns (2): ['AverageSpend', 'AverageFrequency']
+
+  ── AverageSpend ──
+     count   : 40
+     mean    : 57.5750
+     std     : 30.1014
+     min     : 15.0000
+     25%     : 28.7500
+     50%     : 63.0000
+     75%     : 86.2500
+     max     : 95.0000
+     skew    : -0.0938  (approx. normal)
+     kurtosis: -1.8705
+     zeros   : 0
+     negatives: 0
+     unique  : 35
+
+  ── AverageFrequency ──
+     count   : 40
+     mean    : 28.0150
+     std     : 18.6853
+     min     : 5.0000
+     25%     : 9.9500
+     50%     : 28.5000
+     75%     : 46.2750
+     max     : 50.0000
+     skew    : -0.0140  (approx. normal)
+     kurtosis: -2.0184
+     zeros   : 0
+     negatives: 0
+     unique  : 35
+
+
+======================================================================
+  5. OUTLIER DETECTION (IQR method, 1.5×IQR rule)
+======================================================================
+
+  Column                           Outliers   Outlier%     Lower fence     Upper fence
+  -------------------------------------------------------------------------------------
+  AverageSpend                            0      0.00%        -57.5000        172.5000
+  AverageFrequency                        0      0.00%        -44.5375        100.7625
+
+======================================================================
+  6. CATEGORICAL COLUMNS — VALUE DISTRIBUTION
+======================================================================
+
+  Categorical columns (1): ['Name']
+
+  ── Name ──
+     unique values  : 40
+     null count     : 0
+     top 10 values  :
+       Customer1                                  1  (2.50%)
+       Customer2                                  1  (2.50%)
+       Customer3                                  1  (2.50%)
+       Customer4                                  1  (2.50%)
+       Customer5                                  1  (2.50%)
+       Customer6                                  1  (2.50%)
+       Customer7                                  1  (2.50%)
+       Customer8                                  1  (2.50%)
+       Customer9                                  1  (2.50%)
+       Customer10                                 1  (2.50%)
+       ... and 30 more unique values
+
+
+======================================================================
+  7. POTENTIAL DATETIME COLUMNS
+======================================================================
+
+  No obvious datetime columns detected (check manually).
+
+======================================================================
+  8. CORRELATION MATRIX (numeric columns)
+======================================================================
+
+                                  AverageSpendAverageFrequen
+  ----------------------------------------------------------
+  AverageSpend                           1.000         0.056
+  AverageFrequency                       0.056         1.000
+
+  📌 High correlations (|r| > 0.7, excluding self):
+     None found.
+
+======================================================================
+  9. ADVANCED NON-VISUAL DIAGNOSTICS
+======================================================================
+
+  ── Distribution Shape & Artifact Checks ──
+  ── AverageSpend ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.87 < -0.7)
+     ⚠️ HEAVY ROUNDING (100.0% of floats are exact integers)
+
+  ── AverageFrequency ──
+     ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -2.02 < -0.7)
+     ⚠️ ARTIFICIAL MAX CAP (5.0% values sit exactly at max: 50.0)
+
+  ── Non-Linear Relationship Screening (Mutual Info vs Pearson r) ──
+  ✅ No strong non-linear relationships detected.
+
+======================================================================
+  10. DATA QUALITY SUMMARY & RECOMMENDATIONS
+======================================================================
+
+  抓  'Name' has very high cardinality (40 unique) → might be an ID column
+  ⚠️  [Diagnostic Warning] 'AverageSpend': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -1.87 < -0.7)
+  ⚠️  [Diagnostic Warning] 'AverageSpend': ⚠️ HEAVY ROUNDING (100.0% of floats are exact integers)
+  ⚠️  [Diagnostic Warning] 'AverageFrequency': ⚠️ MULTIMODAL/FLAT PATTERN (Excess Kurtosis: -2.02 < -0.7)
+  ⚠️  [Diagnostic Warning] 'AverageFrequency': ⚠️ ARTIFICIAL MAX CAP (5.0% values sit exactly at max: 50.0)
+
+======================================================================
+  Analysis generated : 2026-08-07 17:33:17
+  Tool               : csv_analyser.py  (pandas mode with advanced diagnostics)
+======================================================================
